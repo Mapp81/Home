@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <h2 class="mt-8 text-center text-2xl">Panel de Administración</h2>
+
+  {% if tasks %}
+    {% for task in tasks %}
+    <div class="mt-6 md:flex-row justify-center       items-start mb-4 p-4 ">
+      <div class="flex flex-row justify-center gap-4 items-center w-full mb-4 md:mb-0">
+          <div class="bg-white shadow-md rounded-lg p-4 w-full md:w-1/2">
+            <p><strong>Nombre:</strong> {{ task.name }}</p>
+            <p><strong>Email:</strong> {{ task.email }}</p>
+            <p><strong>Asunto:</strong> {{ task.message }}</p>
+            <p><strong>Fecha:</strong> {{ task.created_at.strftime('%d/%m/%Y %H:%M') }}</p>
+      
+            <form action="{{ url_for('delete_task', id=task.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Eliminar este mensaje?');">
+                <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Eliminar</button>
+            </form>
+
+      </div>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p>No hay mensajes recientes.</p>
+  {% endif %}
+{% endblock %}
+

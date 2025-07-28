@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="text-gray-600 body-font flex justify-center items-center">
+  <div class="container flex px-5 py-48 md:flex-row flex-col items-center justify-center ">
+    <div class="md:w-1/2 mb-10 md:mb-0">
+  <img 
+    class="object-cover object-center rounded-full w-72 h-72" 
+    alt="hero" 
+    src="{{ url_for('static', filename='images/mydogs.jpeg') }}"
+  >
+    </div>
+    <div class="md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">My story
+      </h1>
+      <p class="mb-8 leading-relaxed">Hi! I’m Anni, I’m 44 years old, and throughout my life I’ve taken different paths that have shaped me and brought me to where I am today. For many years, I worked as a dental prosthetist—a profession that taught me the importance of attention to detail, patience, and dedicated work.
+
+        Today, my life moves at a different pace. At this stage, I deeply enjoy dedicating my time to my family and our home, helping to create spaces that feel alive, functional, and full of love.
+
+        I’m married, and together we raise our two teenage daughters, who fill our home with energy, challenges, and lots of learning. We also share our lives with two dogs: Canela, sweet and calm, and Lemmy, the lively spirit of the family.
+
+        One of my great passions is gardening. There’s nothing more relaxing than getting my hands dirty with soil, caring for plants, watching them grow, and transforming little corners into green paradises. I also love interior decorating—I enjoy creating cozy, harmonious spaces where every detail contributes to making the home a true refuge of well-being.
+
+        My blog was born with the intention to inspire those who visit, sharing ideas, tips, and carefully selected products. Every item I recommend is thoughtfully chosen to add value, beauty, and functionality to your life and home.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

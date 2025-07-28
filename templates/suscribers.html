@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Suscriptores</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <h1 class="text-2xl font-bold mb-4">Lista de suscriptores</h1>
+
+  <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+    <thead class="bg-[#2e6e6a] text-white">
+      <tr>
+        <th class="py-2 px-4">Nombre</th>
+        <th class="py-2 px-4">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for sub in subs %}
+        <tr class="border-b">
+          <td class="py-2 px-4">{{ sub.name }}</td>
+          <td class="py-2 px-4">{{ sub.email }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

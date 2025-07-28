@@ -8,6 +8,10 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
     <link rel="stylesheet" href="https://use.typekit.net/ybb6mop.css">
@@ -21,23 +25,34 @@
 
 
     <!-- Header -->
-<header class="flex justify-between items-center h-28 px-6 md:px-12 bg-white/90 shadow-md backdrop-blur-md fixed top-0 w-full z-50"> 
-  <img src="{{ url_for('static', filename='images/.png') }}" alt="logo salemi" class="w-48 md:w-52">
+<header class="flex items-center justify-between px-6 md:px-12 bg-[#d5e3e1] shadow-md backdrop-blur-md fixed top-0 w-full z-50 h-16">
+  <div class="pl-8">
+  <a href="{{ url_for('index') }}"  ><img src="{{ url_for('static', filename='images/logo home deco.png') }}" alt="logo salemi" class="w-20 cursor-pointer"></a>
+  </div>
 <!-- Nav -->
- <nav class="bg-cover bg-center md:h-fit text-neutral-900 px-8 cursor-pointer">
+ <nav class="gap-6 bg-cover bg-center text-[#4F535B] px-8 cursor-pointer">
   <div class="flex items-center h-16 justify-end px-4 md:px-4">
     <button id="menu-toggle" class="md:hidden text-3xl">
       ☰
     </button>
 
     <!-- Menú -->
-    <ul id="menu" class="hidden md:flex md:flex-row flex-col absolute md:static right-2 top-20 md:top-0 bg-white md:bg-transparent shadow-lg md:shadow-none rounded-md px-4 py-2 md:p-0 text-base font-medium tracking-wide">
-  <li><a href="#empresa" class="hover:text-blue-600 p-8 transition-colors duration-200">Empresa</a></li>
-  <li><a href="#servicios" class="hover:text-blue-600 p-8 transition-colors duration-200">Servicios</a></li>
-  <li><a href="#contacto" class="hover:text-blue-600 p-8 transition-colors duration-200">Contacto</a></li>
+    <ul id="menu" class="hidden md:flex md:flex-row flex-col absolute md:static right-2 top-20 md:top-0 bg-white md:bg-transparent shadow-lg md:shadow-none rounded-md px-4 py-2 md:p-0 text-base tracking-wide">
+  <li><a href="{{ url_for('about') }}" class="hover:text-blue-600 p-8 transition-colors duration-200">About me</a></li>
+  <li><a href="{{ url_for('blog') }}" class="hover:text-blue-600 p-8 transition-colors duration-200">Blog</a></li>
+  <li><a href="{{ url_for('contact') }}" class="hover:text-blue-600 p-8 transition-colors duration-200">Contact</a></li>
 </ul>
   </div>
+  
     </nav>
+  <div class="flex items-center gap-8 ">
+    <a href="https://www.instagram.com/homedecoorganization/" target="_blank" class="">
+      <img src="{{ url_for('static', filename='images/IG.svg') }}" alt="link to Instagram" class="w-5 h-5">
+    </a>
+    <a href="https://www.pinterest.com/homedecoorganization/" target="_blank" class="">
+      <img src="{{ url_for('static', filename='images/pinterest.svg') }}" alt="link to pinterest" class="w-5 h-5">
+    </a>
+  </div>
 </header>
 
 
@@ -52,40 +67,14 @@
 <!-- Footer --> 
 
 <footer>
-        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center mb-8">
-          <a href="mailto:jorge@gmail.com" class="text-[#3498db]">jorge@gmail.com</a>    <p class="leading-normal my-5">Buenos Aires, Argentina
-            <br>© 2023 Jorge Staff. All rights reserved
+        <div class="p-2 w-full h-auto flex flex-col pt-4 mt-4 border-t border-gray-200 text-center mb-4">
+          <a href="mailto:jorge@gmail.com" class="text-[#3498db]">homedeco.org@gmail.com</a>    <p class="leading-normal my-5">
+            <br>© 2023 Home Deco Organization. All rights reserved
           </p>
-          <span class="inline-flex">
-            
-            <a class="ml-4 text-gray-500">
-              <span class="[&>svg]:h-6 [&>svg]:w-6">
-  <svg class="cursor-pointer"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    viewBox="0 0 448 512">
-    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-    <path
-      d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
-  </svg>
-</span>
-            </a>
-
-            <a class="ml-4 text-gray-500">
-              <span class="[&>svg]:h-6 [&>svg]:w-6">
-  <svg class="cursor-pointer"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    viewBox="0 0 576 512">
-    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-    <path
-      d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
-  </svg>
-</span>
-            </a>
-
-          </span>
-        </div>
+          <div class="p-2 w-full pt-4 mt-4 border-t border-gray-200 text-center mb-4">
+    <p class="text-sm text-gray-600">
+      This site contains affiliate links. If you purchase through these links, I may earn a commission at no extra cost to you.
+    </p>  
 </footer>
 
 </body>

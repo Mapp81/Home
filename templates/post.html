@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="text-gray-600 md:ml-12 flex flex-col items-center justify-center w-screen">
+  <div class="pt-32 px-8 md:px-0 w-full md:w-2/3 lg:w-1/2">
+    <div class="flex flex-col justify-start text-left mb-16 ">
+      <h3 class="text-3xl font-bold mb-6 text-gray-800">{{ post.slug }}</h3>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-left">{{ post.title}}</h1>
+      <p class="leading-relaxed text-base text-left">{{ post.frase1 }}</p>
+      <ul class="flex flex-row mt-4">
+        <li class="pr-4 cursor-pointer"><a href="https://www.instagram.com/tu_perfil" 
+     target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='images/IG.svg') }}" alt="Share with Instagram" width=25px ></a></li>
+        <li class="pr-4 cursor-pointer"><a id="share-pinterest" 
+     target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='images/pinterest.svg') }}" alt="Share with Pinterest" width=25px ></a></li>
+        <li class="pr-4 cursor-pointer"><a id="share-facebook"
+     target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='images/facebook.svg') }}" alt="Share with Facebook" width=25px ></a></li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="px-8 py-0 flex flex-wrap md:flex-nowrap md:items-start md:justify-start md:flex-col max-w-screen-lg">
+
+    <div class="w-full">
+      <div class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4 h-[500px] md:h-[800px] rounded">
+        <img alt="{{ post.alttitle1 }}" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ post.image1 }}">
+      </div>
+
+      
+     <p class="py-4 leading-relaxed text-base text-left mb-4">{{ post.description }}</p>
+
+      <div class="flex flex-wrap -mx-2 gap-4 md:gap-0">
+        <div class="px-2 w-full md:w-1/2">
+          <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative h-[500px] md:h-[600px] rounded">
+            <img alt="{{ post.alttitle2 }}" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ post.image2 }}">
+            
+          </div>
+          <div class="flex items-center flex-row justify-start gap-2 cursor-pointer">
+          <a href="{{ post.link1 }}" target="_blank" class="text-indigo-500 hover:underline">
+            CLICK HERE TO PURCHASE
+          </a>
+        <img src="{{ url_for('static', filename='images/chain.svg') }}" alt="link to pinterest" class="w-5 h-5"></div>
+          </div>
+        <div class="px-2 w-full md:w-1/2">
+          <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative h-[500px] md:h-[600px] rounded">
+            <img alt="{{ post.alttitle3 }}" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ post.image3 }}">
+            
+          </div>
+          
+          <div class="flex items-center flex-row justify-start gap-2 cursor-pointer">
+          <a href="{{ post.link2 }}" target="_blank" class="text-indigo-500 hover:underline">CLICK HERE TO PURCHASE
+          </a>
+          <img src="{{ url_for('static', filename='images/chain.svg') }}" alt="link to pinterest" class="w-5 h-5">
+          </div>
+          </div>
+        </div>
+      </div>
+    <p class="pb-8 leading-relaxed py-8 text-sm text-left">{{ post.frase2}}</p>
+
+    </div>
+  </div>
+
+
+
+</section>
+
+
+{% endblock %}
+

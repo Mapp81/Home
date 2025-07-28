@@ -1,45 +1,317 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
 
 
 {% extends "layout.html" %}
 
 {% block content %}
-<section class="pt-36 px-6 md:px-24 bg-gray-100 min-h-screen">
-  <h1 class="text-3xl md:text-4xl font-bold mb-10 text-center">Home Organization Essentials You’ll Love</h1>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<section class="text-gray-600 body-font md:items-center md:justify-center md:content-center">
+  <div class="px-5 pt-24 mx-auto flex flex-col items-stretch">
+    <h1 class="text-3xl font-light title-font mt-20 mb-4 text-gray-900 text-center">Home styles ideas</h1>
+        <div class="w-32 h-0.5 bg-gray-500 mt-1 mx-auto"></div>
 
-    <!-- Producto 1 -->
-    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-      <img src="{{ url_for('static', filename='images/producto1.jpg') }}" alt="Auriculares" class="w-full h-48 object-cover">
-      <div class="p-4 flex flex-col justify-between flex-grow">
-        <h2 class="text-xl font-semibold mb-2">Auriculares Bluetooth</h2>
-        <p class="text-gray-600 text-sm flex-grow">Excelente calidad de sonido, cómodos y con buena autonomía.</p>
-        <a href="https://www.amazon.com/tu-link-afiliado1" target="_blank" class="mt-4 inline-block bg-blue-600 text-white text-center px-4 py-2 rounded-full hover:bg-blue-700 transition">Ver en Amazon</a>
+    <div class="flex flex-wrap py-24" >
+       <div class="p-4 md:w-1/3 ">        
+        <div class="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-[#e9e9ec]">
+          <img class="md:h-2/3 w-full object-cover object-center" src="{{ url_for('static', filename='images/baño.jpg') }}" alt="blog">
+          <div class="p-6 mt-6">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">BATHROOM</h2>
+            <h1 class="title-font text-2xl font-light text-gray-900 mb-3">Stylish Shelves & Soap Dispenser </h1>
+            <p class="leading-relaxed font-light mb-3 line-clamp-3">Transform your bathroom with stylish shelves and soap dispensers, designed to maximize space and bring a modern touch to your home. Made from high-quality materials, the shelves come in various colors and offer functional storage for your hygiene products, from shampoos to towels. Another must-have are liquid soap dispensers, which combine style and practicality. They are perfect for replacing supermarket packaging and achieving a more harmonious aesthetic.Buy now and elevate your bathroom organization with a sophisticated and functional design!</p>
+            <div class="flex items-center flex-wrap ">
+              <a href="{{ url_for('view_post', id=2) }}" class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-[#e9e9ec]">
+          <img class="md:h-2/3 w-full object-cover object-center" src="{{ url_for('static', filename='images/cocina.jpg') }}" alt="blog">
+          <div class="p-6 mt-6">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">KITCHEN</h2>
+            <h1 class="title-font text-2xl font-light text-gray-900 mb-3">Organize Your Kitchen with Glass Jars</h1>
+            <p class="leading-relaxed font-light mb-3 line-clamp-3">Transform your kitchen with these glass storage jars, perfect for storing food such as nuts, pasta, and spices with style and functionality. Designed with airtight lids and clear labels, they ensure freshness and order in your home, ideal for lovers of tidiness and sustainability. Check out the purchase links below and discover how they save space while enhancing your decor. Easy to clean and eco-friendly, they are the ultimate solution for an efficient kitchen. Buy these practical storage jars now and elevate your culinary experience!</p>
+            <div class="flex items-center flex-wrap">
+              <a href="{{url_for('view_post', id=1)}}" class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer text-sm">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+             
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-[#e9e9ec]">
+          <img class="md:h-2/3 w-full object-cover object-center" src="{{ url_for('static', filename='images/organizacion.jpg') }}" alt="blog">
+          <div class="p-6 mt-6">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">BEDROOM</h2>
+            <h1 class="title-font text-2xl font-light text-gray-900 mb-3">Elegant Storage Solutions</h1>
+            <p class="leading-relaxed font-light mb-3 line-clamp-3">Transform Your Space with Our Stylish Storage Boxes! Designed to blend elegance and functionality, these modern organizers are perfect for decluttering your home or office. Made from durable, high-quality materials, each box includes customizable labels for quick and easy access to your belongings. Whether for closets, shelves, or minimalist decor, they help you make the most of every corner with style. Available in various sizes and colors, they're the perfect solution for a neat, organized space.Order now and enjoy the beauty of well-organized living!</p>
+            <div class="flex items-center flex-wrap ">
+              <a href="{{url_for('view_post', id=3)}}" class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer text-sm">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Producto 2 -->
-    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-      <img src="{{ url_for('static', filename='images/producto2.jpg') }}" alt="Organizador" class="w-full h-48 object-cover">
-      <div class="p-4 flex flex-col justify-between flex-grow">
-        <h2 class="text-xl font-semibold mb-2">Organizador de Escritorio</h2>
-        <p class="text-gray-600 text-sm flex-grow">Mantené tu espacio limpio y ordenado con estilo minimalista.</p>
-        <a href="https://www.amazon.com/tu-link-afiliado2" target="_blank" class="mt-4 inline-block bg-blue-600 text-white text-center px-4 py-2 rounded-full hover:bg-blue-700 transition">Ver en Amazon</a>
-      </div>
-    </div>
-
-    <!-- Producto 3 -->
-    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-      <img src="{{ url_for('static', filename='images/producto3.jpg') }}" alt="Libreta" class="w-full h-48 object-cover">
-      <div class="p-4 flex flex-col justify-between flex-grow">
-        <h2 class="text-xl font-semibold mb-2">Libreta Bullet Journal</h2>
-        <p class="text-gray-600 text-sm flex-grow">Ideal para organizar tu semana, metas y hábitos diarios.</p>
-        <a href="https://www.amazon.com/tu-link-afiliado3" target="_blank" class="mt-4 inline-block bg-blue-600 text-white text-center px-4 py-2 rounded-full hover:bg-blue-700 transition">Ver en Amazon</a>
-      </div>
-    </div>
-
   </div>
 </section>
+
+
+
+
+
+<section class="text-gray-600 body-font w-screen">
+  <div class="px-5 mx-auto flex flex-col items-stretch ">
+    <h1 class="text-3xl font-light title-font mb-4 text-gray-900 text-center">Click to discover more about each category</h1>
+    <div class="w-32 h-0.5 bg-gray-500 mt-1 mx-auto"></div>
+  </div>      
+  <div class="container px-5 py-24 mx-auto ">
+    
+    <div class="flex flex-wrap -m-4">
+
+      <div class="xl:w-1/3 md:w-1/2 p-4 ">
+        
+        <div class="border border-gray-200 p-6 rounded-lg">
+          <div class="h-[200px] relative">
+            <img alt="Kitchen category" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ url_for('static', filename='images/01.jpg') }}">
+          </div>
+          <h2 class="text-lg text-gray-900 font-medium title-font my-2 ">Kitchen</h2>
+          <p class="leading-relaxed text-base font-light">Below is a comprehensive collection of kitchen organization solutions for a wide variety of layouts. From cabinet storage to counter clutter, to under sinks, inside pantries, on spice racks, and so much more.</p>
+          <a href="{{ url_for('posts_by_slug', slug='kitchen') }}">
+          <div class="flex items-center flex-wrap my-4">
+              <div class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer text-sm">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+        </div>
+        </div>
+        
+        </div>
+        </a>
+      </div>
+
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        
+        <div class="border border-gray-200 p-6 rounded-lg">
+          <div class="h-[200px] relative">
+            <img alt="Bathroom category" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ url_for('static', filename='images/02.jpg') }}">
+          </div>
+
+          <h2 class="text-lg text-gray-900 font-medium title-font my-2">Bathroom</h2>
+          <p class="leading-relaxed text-base font-light">From how to maximize drawer and under-sink space to tricks for the shower, linen closets, and so much more, you'll be sure to find the inspiration you need to transform your bathroom into a tranquil sanctuary!</p>
+          <a href="{{ url_for('posts_by_slug', slug='bathroom') }}">
+            <div class="flex items-center flex-wrap my-4">
+                <div class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer text-sm">Learn More
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+      </div>
+
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        
+        <div class="border border-gray-200 p-6 rounded-lg">
+          <div class="h-[200px] relative">
+            <img alt="bedroom category" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ url_for('static', filename='images/03.jpg') }}">
+          </div>
+
+          <h2 class="text-lg text-gray-900 font-medium title-font my-2">Bedroom</h2>
+          <p class="leading-relaxed text-base font-light">From toddler and kid rooms to Master bedroom retreats, this collection of posts and projects will teach you how to update any bedroom to be a cozy room.
+            <br>
+            <br>
+          </p>
+          <a href="{{ url_for('posts_by_slug', slug='bedroom') }}">
+          <div class="flex items-center flex-wrap my-4">
+              <div class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer text-sm">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+        </div>
+        </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        
+        <div class="border border-gray-200 p-6 rounded-lg">
+          <div class="h-[200px] relative">
+            <img alt="Declutering category" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ url_for('static', filename='images/04.jpg') }}">
+          </div>
+
+          <h2 class="text-lg text-gray-900 font-medium title-font my-2">Declutering</h2>
+          <p class="leading-relaxed text-base font-light">From tiny toys and LEGO sets to bulky toys, electronics, board games, and more, you’ll find real-life, practical solutions for all your family favorite things!</p>
+          <a href="{{ url_for('posts_by_slug', slug='declutering') }}">
+          <div class="flex items-center flex-wrap my-4">
+              <div class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer text-sm">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+        </div>
+        </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        
+        <div class="border border-gray-200 p-6 rounded-lg">
+          <div class="h-[200px] relative">
+            <img alt="Living- dinning category" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ url_for('static', filename='images/05.jpg') }}">
+          </div>
+
+          <h2 class="text-lg text-gray-900 font-medium title-font my-2">Living- dinning room</h2>
+          <p class="leading-relaxed text-base font-light">Dining- Living Rooms are the heart of the home! A place for meals, gathering, homework, entertaining and so much more!</p>
+          <a href="{{ url_for('posts_by_slug', slug='living') }}">
+          <div class="flex items-center flex-wrap my-4">
+              <div class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer text-sm">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+        </div>
+        </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        
+        <div class="border border-gray-200 p-6 rounded-lg">
+          <div class="h-[200px] relative">
+            <img alt="Garden category" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ url_for('static', filename='images/06.jpg') }}">
+          </div>
+
+          <h2 class="text-lg text-gray-900 font-medium title-font my-2">Gardering</h2>
+          <p class="leading-relaxed text-base font-light">Porches, patios, decks, and gardens around homes are an extension of our living spaces.</p>
+          <br>
+          <a href="{{ url_for('posts_by_slug', slug='garden') }}">
+          <div class="flex items-center flex-wrap my-4">
+              <div class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer text-sm">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+        </div>
+        </div>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flex justify-center text-base text-lime-900 px-4 py-3 rounded mb-4 ">
+      {% for message in messages %}
+        <p class="border-lime-950 px-4 py-3 rounded mb-4 ">{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+
+<form method="POST" action="/" class="text-gray-600 body-font bg-[#CCB7BA]">
+  <div class="container px-5 pb-5 pt-5 mx-auto flex flex-col md:flex-row items-center justify-around">
+    <div class="flex ">
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Suscribe</p>
+    </div>
+    <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-center md:items-end">
+      <div class="relative flex-grow w-full">
+        <label for="full-name" class="leading-7 text-sm text-gray-600"></label>
+        <input type="text" id="full-name" name="full-name" placeholder="Name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <div class="relative flex-grow w-full">
+        <label for="email" class="leading-7 text-sm text-gray-600"></label>
+        <input type="email" id="email" name="email" placeholder="Email"  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <button class="text-white bg-[#2e6e6a] hover:bg-lime-900 transition cursor-pointer rounded-lg text-sm px-12 py-3 text-center">SUSCRIBE</button>
+    </div>
+  </div>
+</form>
+
+
+ 
+
+<section class="text-gray-600 body-font justify-center pt-24 items-center bg-[#eee] section-bg">
+  <div class="container px-5 mx-auto">
+  <div class="flex flex-col items-center text-center w-full">
+    <h2 class="text-3xl font-light title-font mb-2 text-gray-900">Goods Reads</h2>
+    <div class="w-32 h-0.5 bg-gray-500 mt-1 mx-auto"></div>
+  </div>
+</div>
+
+  <div class="container px-8 py-24 mx-auto">
+    <div class="flex -mx-4 -mb-10 text-center md:flex-row flex-col justify-center items-center">
+      
+        <div class="rounded-lg overflow-hidden md:w-1/2 h-64 md:h-[1000px] object-cover" >
+          <img alt="content" class="object-cover object-center h-full w-full" src="{{ url_for('static', filename='images/01book.jpg') }}">
+        </div>
+
+        <div class="flex justify-center flex-col flex-grow md:py-6 mt-6 md:mt-0 md:text-left md:w-1/2 md:px-10">
+        <h3 class="title-font text-2xl font-light text-gray-900 mt-6 mb-3">Rediscover the World of Beans and Grains</h3>
+        <p class="leading-relaxed font-light">
+          Did you know that with a simple bean you can make everything from tacos and pizzas to comforting soups and global favorites like hummus or gyros?
+          This book is a gem for anyone who wants to eat delicious, diverse, and healthy—without the fuss!
+
+          ✔️ Over 100 tested and flavorful recipes
+          ✔️ Clear instructions and practical tips (no more clumpy grains!)
+          ✔️ Options for vegetarians, vegans, and omnivores
+          ✔️ Creative ideas like savory oatmeal or teff-stuffed squash with lime crema
+          ✔️ Reinvented classics: Texas chili, black bean burgers, creamy white bean soup
+          ✔️ Easy swaps and helpful suggestions in every recipe
+
+          ✨ Learn to cook with beans and grains like never before. Perfect for everyday meals or to impress on special occasions.</p>
+        
+        <a href="https://amzn.to/4f6Sa2I"><button type="button" class="text-white bg-[#2e6e6a] hover:bg-lime-900 transition cursor-pointer font-medium my-4 rounded-lg text-sm px-8 py-5 text-center">BUY!</button></a>
+
+        </div>
+
+      
+      
+    </div>
+  </div>
+</section>
+
+
+
+
 {% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}
+
+
+
