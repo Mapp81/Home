@@ -1,0 +1,30 @@
+# Entornos virtuales
+env/
+venv/
+.venv/
+
+# Archivos de configuración privada
+.env
+
+# Archivos de base de datos SQLite
+*.db
+*.sqlite3
+
+# Migraciones (si querés subirlas, sacá esta línea)
+#migrations/
+
+# Python cache y logs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
