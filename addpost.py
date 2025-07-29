@@ -7,19 +7,25 @@ with app.app_context():
      with app.test_request_context():
     # Crear un nuevo post
         new_post = Post(
-            title="Enchant Your Evenings with Garden Glow",
-            frase1="Transform your garden into a path of light and calm.",
-            description="These LED solar woven sphere lights and stakes not only illuminate, but add a charming touch to any garden, patio or terrace. Easy to install, waterproof and rechargeable with solar energy, they are the perfect option to create cozy outdoor environments without cables or complications. Ideal for special nights, outdoor dinners or simply enjoying the landscape from your window. Available on Amazon for immediate shipping!",
-            slug="garden",
-            image1= url_for('static', filename='images/06gardenlights.png'),  
-            alttitle1="iluminated garden",
-            image2=url_for('static', filename='images/06globe.jpg'),
-            alttitle2="solar globe light",
-            image3=url_for('static', filename='images/06solarground.jpg'),
-            alttitle3="solar ground light",
-            link1='https://amzn.to/41eFC3s',
-            link2='https://amzn.to/4fty3fz',
-            frase2="I am an Amazon associate. I invite you to use these links for your convenience and to continue maintaining my website.",
+             title="Elegant Storage Solutions",
+            frase1="The perfect blend of function and elegance.",
+            description="Transform Your Space with Our Stylish Storage Boxes! Designed to blend elegance and functionality, these modern organizers are perfect for decluttering your home. Made from durable, high-quality materials, each box includes customizable labels for quick and easy access to your belongings. Whether for closets, shelves, or minimalist decor, they help you make the most of every corner with style. Available in various sizes and colors, they're the perfect solution for a neat, organized space. Order now and enjoy the beauty of well-organized living!",
+            slug="bedroom",
+            image1= url_for('static', filename='images/03box2.jpg'),  
+            alttitle1="bedroom organization",
+            image2=url_for('static', filename='images/03box3.jpg'),
+            alttitle2="boxes",
+            image3=url_for('static', filename='images/03socks.jpg'),
+            alttitle3="boxes",
+            link1='https://amzn.to/4556Nz3',
+            label1="Storage Bins with lids",
+            link2='https://amzn.to/3UFDyOg',
+            label2="Storage Bins + window",
+            link3='https://amzn.to/3U77Klk',
+            label3="Underwear Organizer",
+            link4='https://amzn.to/413OPMj',
+            label4="Socks Drawer Organizer",
+            frase2="As an Amazon Associate, I earn from qualifying purchases. If you use these affiliate links, you’ll be supporting this site at no additional cost to you — thank you!",
         )
         
         # Agregar y confirmar en la base de datos

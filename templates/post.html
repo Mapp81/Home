@@ -28,32 +28,32 @@
 
       
      <p class="py-4 leading-relaxed text-base text-left mb-4">{{ post.description }}</p>
-
+      <p class="text-sm text-gray-500 mt-4 italic">
+  Images are AI-generated and for illustrative purposes only. The actual product may vary.
+</p>
       <div class="flex flex-wrap -mx-2 gap-4 md:gap-0">
         <div class="px-2 w-full md:w-1/2">
           <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative h-[500px] md:h-[600px] rounded">
             <img alt="{{ post.alttitle2 }}" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ post.image2 }}">
             
           </div>
-          <div class="flex items-center flex-row justify-start gap-2 cursor-pointer">
-          <a href="{{ post.link1 }}" target="_blank" class="text-indigo-500 hover:underline">
-            CLICK HERE TO PURCHASE
-          </a>
-        <img src="{{ url_for('static', filename='images/chain.svg') }}" alt="link to pinterest" class="w-5 h-5"></div>
-          </div>
+        </div>  
         <div class="px-2 w-full md:w-1/2">
           <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative h-[500px] md:h-[600px] rounded">
             <img alt="{{ post.alttitle3 }}" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ post.image3 }}">
-            
           </div>
-          
-          <div class="flex items-center flex-row justify-start gap-2 cursor-pointer">
-          <a href="{{ post.link2 }}" target="_blank" class="text-indigo-500 hover:underline">CLICK HERE TO PURCHASE
-          </a>
-          <img src="{{ url_for('static', filename='images/chain.svg') }}" alt="link to pinterest" class="w-5 h-5">
-          </div>
-          </div>
+        </div>  
+        <div class="flex items-center flex-row justify-center gap-2 cursor-pointer w-full">
+          <a href="{{ post.link1 }}" target="_blank" class="text-indigo-500 hover:underline">{{ post.label1 }}/</a>
+          <a href="{{ post.link2 }}" target="_blank" class="text-indigo-500 hover:underline">{{ post.label2 }}/</a>
+          <a href="{{ post.link3 }}" target="_blank" class="text-indigo-500 hover:underline">{{ post.label3 }}/</a>
+          <a href="{{ post.link4 }}" target="_blank" class="text-indigo-500 hover:underline">{{ post.label4 }}</a>
         </div>
+
+    
+
+        
+        
       </div>
     <p class="pb-8 leading-relaxed py-8 text-sm text-left">{{ post.frase2}}</p>
 

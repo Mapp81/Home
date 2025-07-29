@@ -10,4 +10,4 @@
             alttitle3="blanket organization",
             link1='https://amzn.to/4fbY4j5',
             link2='https://amzn.to/4lU06Ho',
-            frase2="I am an Amazon associate. I invite you to use these links for your convenience and to continue maintaining my website.",
+            frase2="As an Amazon Associate, I earn from qualifying purchases. If you use these affiliate links, you’ll be supporting this site at no additional cost to you — thank you!",

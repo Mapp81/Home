@@ -19,7 +19,13 @@ class Post(db.Model):
     image3 = db.Column(db.String(200))
     alttitle3 = db.Column(db.String(100))
     link1 = db.Column(db.String(200))
+    label1 = db.Column(db.String(100), nullable=False)
     link2 = db.Column(db.String(200))
+    label2 = db.Column(db.String(100), nullable=False)
+    link3 = db.Column(db.String(200))
+    label3 = db.Column(db.String(100), nullable=False)
+    link4 = db.Column(db.String(200)) 
+    label4 = db.Column(db.String(100), nullable=False)
     frase1 = db.Column(db.String(200), nullable=False)
     frase2 = db.Column(db.String(200), nullable=True)
 
