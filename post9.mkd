@@ -1,12 +1,3 @@
-from app import db, app
-from models import Post
-from flask import url_for
-
-
-with app.app_context():
-     with app.test_request_context():
-    # Crear un nuevo post
-        new_post = Post(
             title="Transform Your Bedroom Into a Calm Workspace with a Bed Tray, Laptop Desk, and Cozy Bedding",
             frase1="Your bedroom can be more than a place to rest — it can be your personal haven of comfort and focus.",
             description="Sometimes the most peaceful moments happen right in your bed — sipping coffee, journaling, or getting a bit of work done without leaving your cozy bubble. With a simple bed tray and a foldable laptop desk, your bedroom transforms into a soft workspace that invites rest and focus at once. White cotton sheets keep the space feeling bright and clean, while chenille pillows add texture and comfort. This setup is made for slow mornings, quiet evenings, and everything in between.✨ Ready to make your bedroom your favorite spot in the house? Scroll down to shop the look.",
@@ -26,10 +17,3 @@ with app.app_context():
             link4='https://amzn.to/4fqvhHB',
             label4="Laptop Desk for Bed",
             frase2="As an Amazon Associate, I earn from qualifying purchases. If you use these affiliate links, you’ll be supporting this site at no additional cost to you — thank you!",
-        )
-        
-        # Agregar y confirmar en la base de datos
-        db.session.add(new_post)
-        db.session.commit()
-        
-        print("Post agregado correctamente!")
