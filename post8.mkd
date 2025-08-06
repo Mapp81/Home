@@ -1,12 +1,3 @@
-from app import db, app
-from models import Post
-from flask import url_for
-
-
-with app.app_context():
-     with app.test_request_context():
-    # Crear un nuevo post
-        new_post = Post(
             title="Create a Warm and Organized Entryway with a Metal Shoe Rack, Wall-Mounted Coat Rack, and Woven Rug",
             frase1="Small details can transform your home's entrance into a functional and welcoming space.",
             description="Turn your entryway into a cozy and organized area with just a few thoughtful additions: a sleek black metal 2-tier shoe rack, a wall-mounted wooden coat rack, and a soft woven rug. These simple elements bring harmony, style, and purpose to the place that welcomes you home every day. Shop the look in just one click.",
@@ -26,10 +17,3 @@ with app.app_context():
             link4='https://amzn.to/41pHZk8',
             label4="Jute Rug",
             frase2="As an Amazon Associate, I earn from qualifying purchases. If you use these affiliate links, you’ll be supporting this site at no additional cost to you — thank you!",
-        )
-        
-        # Agregar y confirmar en la base de datos
-        db.session.add(new_post)
-        db.session.commit()
-        
-        print("Post agregado correctamente!")
