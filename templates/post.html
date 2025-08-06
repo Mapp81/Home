@@ -43,11 +43,20 @@
             <img alt="{{ post.alttitle3 }}" class="w-full object-cover h-full object-center block opacity-90 absolute inset-0 rounded" src="{{ post.image3 }}">
           </div>
         </div>  
-        <div class="flex items-center flex-row justify-center gap-2 cursor-pointer w-full">
-          <a href="{{ post.link1 }}" target="_blank" class="text-indigo-500 hover:underline">{{ post.label1 }}/</a>
-          <a href="{{ post.link2 }}" target="_blank" class="text-indigo-500 hover:underline">{{ post.label2 }}/</a>
-          <a href="{{ post.link3 }}" target="_blank" class="text-indigo-500 hover:underline">{{ post.label3 }}/</a>
-          <a href="{{ post.link4 }}" target="_blank" class="text-indigo-500 hover:underline">{{ post.label4 }}</a>
+        <div class="flex items-center flex-row justify-center gap-4 cursor-pointer w-full py-8 ">
+          <div class="flex justify-center mt-8">
+            <div class="animate-bounce text-5xl text-indigo-500 cursor-default">
+              ↓
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 cursor-default">BUY NOW!</h3>
+          <img src="{{ url_for('static', filename='images/shopping2.svg') }}" alt="shop icon" class="cursor-default">
+        </div>
+        <div class="flex items-center flex-col md:flex-row justify-center gap-2 cursor-pointer w-full">
+          <a href="{{ post.link1 }}" target="_blank" class="text-indigo-500 hover:underline text-xl" rel="nofollow">{{ post.label1 }}/</a>
+          <a href="{{ post.link2 }}" target="_blank" class="text-indigo-500 hover:underline text-xl" rel="nofollow">{{ post.label2 }}/</a>
+          <a href="{{ post.link3 }}" target="_blank" class="text-indigo-500 hover:underline text-xl" rel="nofollow">{{ post.label3 }}/</a>
+          <a href="{{ post.link4 }}" target="_blank" class="text-indigo-500 hover:underline text-xl" rel="nofollow">{{ post.label4 }}</a>
         </div>
 
     
@@ -55,7 +64,7 @@
         
         
       </div>
-    <p class="pb-8 leading-relaxed py-8 text-sm text-left">{{ post.frase2}}</p>
+    <p class="pb-8 leading-relaxed py-8 text-xs text-center">{{ post.frase2}}</p>
 
     </div>
   </div>
